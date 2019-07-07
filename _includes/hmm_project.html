@@ -1,8 +1,10 @@
 <div class="user">
-    <div class="tech">
+    <div class="project">
       <h2>Hidden Markov Model</h2>
         <img alt="First Image" src="{{ "/assets/img/hmm_generator.png" | prepend: site.baseurl }}" width = "350" height "70" />
         <img alt="First Image" src="{{ "/assets/img/generation_example.png" | prepend: site.baseurl }}" width = "350" height "70" />
-        <p>I deploy the majority of my code, mostly data scrapping, using an array of Raspberry Pis, but do the coding in Windows with the VS Code Editor. <br><a href="algo.html"> Link to more </a></br></p>    
-        <p>More words for it</p> 
+        <p>For my Machine Learning Class, we were given were four projects, and this was one. We were required to create a Hidden Markov Model using only NumPy. If you have never heard of a Hidden Markov Model or its usage, here is an informative <a href = "https://towardsdatascience.com/introduction-to-hidden-markov-models-cd2c93e6b781">article</a> on the subject.</p>
+        <p>Our plan was to create probability dictionaries for each word. The desire would be getting all the the probability that a third word would come after the first two. For a set of two words, to choose the best third, we created a dictionary of the probabilities of all third word coming two words before the first word in the sentence and one before the second word in the sentence. We then created a joint dictionary by multiplying the probabilities for each word, which gives us the probability that the third word comes after the first two. We could simply take the word with the highest probability to make sentences.</p>
+        <p>This was our first attempt, but it ran into the problem that there was no variability. Instead, we used this probability dictionary to mimic a probability distribution and when you call the function, it samples from the created dictionary, thus giving variability to the third word while still giving informed answers.</p>
+        <p>The code for this project is in our GitHub repo - EECS 738 but can also be found <a href = "https://github.com/AustinJAdams/EECS-738/blob/master/AutoCorrectandTextGeneration/Notebooks/AutocorrectAndGenerationusingShakespeare.ipynb">here</a></p> 
     </div>
